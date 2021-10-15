@@ -22,4 +22,10 @@ public class FishMovement : MonoBehaviour
         transform.Translate(swimSpeed * Time.deltaTime, 0, 0);
 
     }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("sss");
+    }
 }

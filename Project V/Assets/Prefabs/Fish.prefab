@@ -257,9 +257,6 @@ GameObject:
   - component: {fileID: 9146546793662871843}
   - component: {fileID: 238037363}
   - component: {fileID: 4487543787732205221}
-  - component: {fileID: 851164408683071973}
-  - component: {fileID: 2911564086868249443}
-  - component: {fileID: 1632165007047160829}
   - component: {fileID: -2713610598983573873}
   m_Layer: 0
   m_Name: Fish
@@ -325,68 +322,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.26887178}
   m_EdgeRadius: 0
---- !u!58 &851164408683071973
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5670114366176244033}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.69, y: 0.008001566}
-  serializedVersion: 2
-  m_Radius: 0.2746575
---- !u!70 &2911564086868249443
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5670114366176244033}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.016003452, y: 0.073962994}
-  m_Size: {x: 0.5000006, y: 0.32396358}
-  m_Direction: 1
---- !u!60 &1632165007047160829
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5670114366176244033}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.5121078, y: 0.1784935}
-      - {x: 0.43590206, y: 0.13831404}
-      - {x: 0.42576152, y: -0.13687551}
-      - {x: 0.50243413, y: -0.18488574}
-      - {x: 0.86037076, y: -0.0057159066}
 --- !u!50 &-2713610598983573873
 Rigidbody2D:
   serializedVersion: 4

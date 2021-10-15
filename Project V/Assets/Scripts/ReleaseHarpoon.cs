@@ -6,11 +6,14 @@ public class ReleaseHarpoon : MonoBehaviour
 {
     public GameObject harpoon;
     public GameObject harpoonHead;
+    GameObject InsHarpoon;
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(harpoonHead, harpoon.transform.position, transform.rotation);
+            InsHarpoon = Instantiate(harpoonHead, harpoon.transform.position, transform.rotation) as GameObject;
         }
+
+
     }
 }
