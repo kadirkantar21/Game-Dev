@@ -29,13 +29,16 @@ public class ReleaseHarpoon : MonoBehaviour
     {
         Vector3 length = hookLn.GetPosition(1);
 
-        if (length.y <= -7) hookDir = 1;
+        if (length.y <= -7 || FindObjectOfType<HitTarget>().Hit) hookDir = 1;
         if (length.y >= -.9f) hookDir = -1;
+        
 
         length.y += Hookspeed * hookDir * Time.deltaTime;
+        
         CatchObj.Translate(Vector3.up * Hookspeed * hookDir * Time.deltaTime, Space.Self);
         hookLn.SetPosition(1, length);
-        
+       
+
 
         if (timeRemain > 0)
         {
@@ -50,17 +53,11 @@ public class ReleaseHarpoon : MonoBehaviour
 
         }
 
-
-
-
-        
-
-
-
-
-
-
-
-
+        if (FindObjectOfType<FishMovement>() == null)
+        {
+            finished = true;
+        }
     }
+
+    
 }
