@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HarpoonSpeed : MonoBehaviour
 {
+    //Zýpkýn hýzý ve hareketi
     private float speed = 5f;
     private void Update()
     {

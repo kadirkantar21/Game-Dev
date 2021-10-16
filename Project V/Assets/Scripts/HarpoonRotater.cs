@@ -22,6 +22,7 @@ public class HarpoonRotater : MonoBehaviour
         
         if (rotating)
         {
+            //Zýpkýnýn zaman içerisinde açýsýný deðiþtirir. Formül (zaman * dönme hýzý, kaç derece döneceði) - zýpkýnýn ortalanmasý için verilen orta deðer
             float angle = Mathf.PingPong(Time.time * turnSpeed, maxZrotation) - differenceFromLeft;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
@@ -32,7 +33,7 @@ public class HarpoonRotater : MonoBehaviour
         }
        
 
-
+        //Mouse sol týk basýldýðýnda zýpkýný fýrlatýr.
         if (Input.GetMouseButtonDown(0))
         {
             rotating = false;

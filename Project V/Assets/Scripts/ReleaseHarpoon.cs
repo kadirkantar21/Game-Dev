@@ -49,7 +49,7 @@ public class ReleaseHarpoon : MonoBehaviour
         }
 
 
-        Debug.Log(finished);
+        //Debug.Log(finished);
 
 
         
