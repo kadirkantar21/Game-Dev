@@ -10,6 +10,7 @@ public class HarpoonRotater : MonoBehaviour
     bool rotating = true;
     LineRenderer hookLn;
     public GameObject hook;
+    
 
 
     private void Start()
@@ -38,8 +39,9 @@ public class HarpoonRotater : MonoBehaviour
         {
             rotating = false;
             FindObjectOfType<ReleaseHarpoon>().finished = false;
-            FindObjectOfType<ReleaseHarpoon>().timeRemain = 2.4f;
+            FindObjectOfType<ReleaseHarpoon>().timeRemain = 2.45f;
             hookLn.SetPosition(1, new Vector3(0, -1, 0));
+            
            
 
         }

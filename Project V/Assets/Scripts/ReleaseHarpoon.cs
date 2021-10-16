@@ -9,8 +9,9 @@ public class ReleaseHarpoon : MonoBehaviour
     LineRenderer hookLn;
     int hookDir = -1;
     public bool finished = false;
-    public float timeRemain = 2.4f;
-    
+    public float timeRemain = 2.45f;
+    public Transform CatchObj;
+
 
     private void Start()
     {
@@ -32,9 +33,10 @@ public class ReleaseHarpoon : MonoBehaviour
         if (length.y >= -.9f) hookDir = -1;
 
         length.y += Hookspeed * hookDir * Time.deltaTime;
+        CatchObj.Translate(Vector3.up * Hookspeed * hookDir * Time.deltaTime, Space.Self);
         hookLn.SetPosition(1, length);
-
         
+
         if (timeRemain > 0)
         {
             timeRemain -= Time.deltaTime;
@@ -49,7 +51,6 @@ public class ReleaseHarpoon : MonoBehaviour
         }
 
 
-        //Debug.Log(finished);
 
 
         

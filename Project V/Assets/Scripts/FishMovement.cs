@@ -4,32 +4,48 @@ using UnityEngine;
 
 public class FishMovement : MonoBehaviour
 {
+    public bool catched = false;
     //Balýðýn saða sola maximum gideceði mesafe
-    private float maxRange = 2f;
+    private float maxRange = 2.1f;
     //Balýðýn yüzme hýzý
-    private float swimSpeed = 1f;
+    private float swimSpeed = 5f;
+    Transform harpoon;
     private void Update()
     {
-        //Balýðý x pozisyonun maximum mesafeye ulaþýrsa balýðý terse döndürür.
-        if (transform.position.x > maxRange)
+
+        if (!catched)
         {
-            swimSpeed *= -1;
-            transform.localScale = new Vector2(transform.localScale.x * -1, 0.5f);
+            //Balýðý x pozisyonun maximum mesafeye ulaþýrsa balýðý terse döndürür.
+            if (transform.position.x > maxRange)
+            {
+                swimSpeed *= -1;
+                transform.localScale = new Vector2(transform.localScale.x * -1, 0.5f);
+            }
+            else if (transform.position.x < -maxRange)
+            {
+                swimSpeed *= -1;
+                transform.localScale = new Vector2(transform.localScale.x * -1, 0.5f);
+            }
+            //Balýk hareketi
+            transform.Translate(swimSpeed * Time.deltaTime, 0, 0);
         }
-        else if (transform.position.x < -maxRange)
+        else
         {
-            swimSpeed *= -1;
-            transform.localScale = new Vector2(transform.localScale.x * -1, 0.5f);
+            transform.position = harpoon.position;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
-        //Balýk hareketi
-        transform.Translate(swimSpeed * Time.deltaTime, 0, 0);
+        
+        
 
     }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Balýða bir collider çarptýðýnda iþlem yaptýrýr.
-        Debug.Log("sss");
+        harpoon = collision.transform;
+        catched = true;
+
     }
+
+
+
 }
